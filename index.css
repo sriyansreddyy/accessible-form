@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content:  center;
+    align-items: center;
+}
+
+.containter, 
+img,
+input,
+button {
+    border-radius: 5px;    
+}
+
+.container {
+    width:100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB , #27DBB1, #FFDC18, #FF3706);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+img {
+    display: block;
+    height: 150px;
+    padding: 1em 0 0;
+    margin: 0 auto;
+}
+
+form {
+    display: grid;
+    grid-template: 1em repeat(4, 1fr) 1em/ 1em 0.5em 1fr 2em;
+    gap: 1em;
+    min-height: 500px;
+}
+
+input {
+    grid-column: 3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#name {
+    grid-row: 2;
+}
+
+#location {
+    grid-row: 3;
+}
+
+#email {
+    grid-row: 4;
+}
+
+input,
+button {
+    border-radius: 5px;
+    border: none;
+    padding: 0.5em 1em;
+    color:#404040;
+}
+
+input {
+    color: black;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: pink;   
+}
+
+input::-moz-placeholder  {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:-ms-input-placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:-moz-placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    grid-row: 5;
+    grid-column: 2/-2;
+    font-family: inherit;
+    font-size: inherit;
+    max-width: 400px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background-color:  #f1c40f;
+}
+
+input:focus {
+    background-color: #82e0aa;
+}
